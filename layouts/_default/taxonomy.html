@@ -11,7 +11,6 @@
       {{ $taxonomy := .Data.Plural }}
       {{ $slug := .Title | urlize }}
       {{ $taxdata := index $data $taxonomy }}
-      <!-- {{ $term := index $taxdata $slug }} -->
       {{ if eq $taxonomy "categories" }}
         {{ $.Scratch.Set "categories" $slug }}
       {{ end }}
